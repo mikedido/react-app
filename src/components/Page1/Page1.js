@@ -9,13 +9,18 @@ const Page1 = (props) => {
 
     //get jokes
     useEffect(() => {
-        AxiosService.getJokes().then((response) => {
-            setJoke(response.data);
-        }).catch((error) => {
-            console.log(error);
-          })
+        getNewJoke()
     }, []);
 
+    const getNewJoke = () => {
+      AxiosService.getJokes().then((response) => {
+          setJoke(response.data);
+            }).catch((error) => {
+                console.log(error);
+              })
+        ;
+    }
+    
   return (
     <div className="App">
       <header className="App-header">
@@ -27,9 +32,10 @@ const Page1 = (props) => {
           joke !== '' &&
           <p>{joke.value.joke}</p>
         }
-        <p>
-          Page 1.
-        </p>
+        
+        <button onClick={getNewJoke}>
+          Get a new joke
+        </button>
       </header>
       <Footer/>
     </div>
