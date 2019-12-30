@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.Header {
+  z-index: 1021;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  .logo-carma-container {
+    img {
+      width: 38px;
+    }
+  }
+  .application-name-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .website-name {
+      position: relative;
+      padding-left: 20px;
+    }
+  }
+}
